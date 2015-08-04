@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Relax App!</title>
+  <style>
+  pre {
+    background: #eee;
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin: 24px 12px;
+    overflow: auto;
+  }
+  #code:before, #result:before {
+    content: 'code';
+    display: block;
+    font: 24px/48px 'Arial Black';
+    color: #ccc;
+  }
+  #result:before {
+    content: 'result';
+  }
+  </style>
+</head>
+<body>
+<pre id="code">
+with (new XMLHttpRequest()) {
+  open('GET', '/api', true);
+  onload = function() {
+    document.querySelector('#result').textContent = this.response
+  };
+  send();
+}
+</pre>
+
+  <pre id="result">loading…</pre>
+
+  <script src='/store.js'></script>
+  <script>
+  // don't try this at home™
+  eval(document.querySelector('#code').textContent)
+  </script>
+</body>
+</html>
