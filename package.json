@@ -37,7 +37,7 @@
   "dependencies": {
     "humble-localstorage": "^1.4.1",
     "joi": "^6.6.1",
-    "pouchdb-hoodie-store": "git://github.com/hoodiehq/pouchdb-hoodie-store.git",
+    "pouchdb-hoodie-store": "^1.0.0",
     "spawn-pouchdb-server": "^2.0.1"
   }
 }
