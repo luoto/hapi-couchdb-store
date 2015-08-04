@@ -1,0 +1,43 @@
+{
+  "name": "hapi-couchdb-store",
+  "description": "CouchDB REST & front-end API",
+  "main": "index.js",
+  "bin": "bin/server",
+  "scripts": {
+    "test": "standard",
+    "start": "bin/server",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoodiehq/hapi-couchdb-store.git"
+  },
+  "keywords": [
+    "hapi",
+    "plugin",
+    "couchdb",
+    "pouchdb",
+    "hoodie"
+  ],
+  "author": "Gregor Martynus <gregor@martynus.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoodiehq/hapi-couchdb-store/issues"
+  },
+  "homepage": "https://github.com/hoodiehq/hapi-couchdb-store#readme",
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "good": "^6.3.0",
+    "good-console": "^5.0.2",
+    "hapi": "^8.8.1",
+    "hapi-cors-headers": "^1.0.0",
+    "standard": "^5.0.0",
+    "semantic-release": "^4.0.1"
+  },
+  "dependencies": {
+    "humble-localstorage": "^1.4.1",
+    "joi": "^6.6.1",
+    "pouchdb-hoodie-store": "git://github.com/hoodiehq/pouchdb-hoodie-store.git",
+    "spawn-pouchdb-server": "^2.0.1"
+  }
+}
