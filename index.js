@@ -22,8 +22,8 @@ function hapiCouchDbStore (server, options, next) {
   spawnPouchdbServer(options.couch, function (error, pouch) {
     if (error) return next(error)
 
-    var couchdb = 'http://localhost:' + pouch.config.httpd.port + '/_utils'
-    server.log(['couchdb-store'], 'PouchDB Server ready at ' + couchdb)
+    var couchdb = 'http://localhost:' + pouch.config.httpd.port
+    server.log(['couchdb-store'], 'PouchDB Server ready at ' + couchdb + '/_utils')
     server.expose('couchdb', couchdb)
     next()
   })
