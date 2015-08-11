@@ -2,11 +2,11 @@
 
 var Store = require('pouchdb-hoodie-store')
 var humbleLocalStorage = require('humble-localstorage')
-var uuid = require('./lib/uuid')
+var randomString = require('random-string')
 
 var storeId = humbleLocalStorage.getItem('_storeId')
 if (!storeId) {
-  storeId = uuid(7).toLowerCase()
+  storeId = randomString({length: 7}).toLowerCase()
   humbleLocalStorage.setItem('_storeId', storeId)
 }
 
