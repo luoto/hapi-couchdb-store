@@ -26,18 +26,20 @@
   },
   "homepage": "https://github.com/hoodiehq/hapi-couchdb-store#readme",
   "devDependencies": {
+    "standard": "^5.0.0",
+    "semantic-release": "^4.0.1"
+  },
+  "dependencies": {
+    "boom": "^2.8.0",
     "browserify": "^11.0.1",
     "good": "^6.3.0",
     "good-console": "^5.0.2",
     "hapi": "^8.8.1",
     "hapi-cors-headers": "^1.0.0",
-    "standard": "^5.0.0",
-    "semantic-release": "^4.0.1"
-  },
-  "dependencies": {
     "humble-localstorage": "^1.4.1",
     "joi": "^6.6.1",
     "pouchdb-hoodie-store": "^1.0.0",
+    "random-string": "^0.1.2",
     "spawn-pouchdb-server": "^2.0.1"
   }
 }
