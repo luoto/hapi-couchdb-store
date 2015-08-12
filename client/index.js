@@ -6,7 +6,7 @@ var randomString = require('random-string')
 
 var storeId = humbleLocalStorage.getItem('_storeId')
 if (!storeId) {
-  storeId = randomString({length: 7}).toLowerCase()
+  storeId = 'store-' + randomString({length: 7}).toLowerCase()
   humbleLocalStorage.setItem('_storeId', storeId)
 }
 
