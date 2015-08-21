@@ -33,7 +33,7 @@
     "browserify": "^11.0.1",
     "good": "^6.3.0",
     "good-console": "^5.0.2",
-    "hapi": "^8.8.1",
+    "hapi": "^9.0.0",
     "hapi-cors-headers": "^1.0.0",
     "humble-localstorage": "^1.4.1",
     "joi": "^6.6.1",
