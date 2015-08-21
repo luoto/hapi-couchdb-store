@@ -9,6 +9,12 @@ var plugin = require('../index')
 var server = new Hapi.Server()
 server.connection({ port: 3000 })
 
+server.register({
+  register: require('inert')
+}, function (error) {
+  if (error) throw error
+})
+
 // serve demo app at route path
 server.route({
   method: 'GET',
@@ -35,14 +41,21 @@ server.register({
 })
 
 server.register({
-  register: plugin
+  register: require('h2o2')
 }, function (error) {
   if (error) throw error
 })
 
-// enable CORS
-server.ext('onPreResponse', corsHeaders)
+server.register({
+  register: plugin
+}, function (error) {
+  if (error) throw error
 
-server.start(function () {
-  console.log('Server running at:', server.info.uri)
+  // enable CORS
+  server.ext('onPreResponse', corsHeaders)
+
+  server.start(function () {
+    console.log('Server running at:', server.info.uri)
+  })
 })
+
